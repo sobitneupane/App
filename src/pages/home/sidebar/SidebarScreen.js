@@ -90,7 +90,9 @@ class SidebarScreen extends Component {
                             onItemSelected={this.onCreateMenuItemSelected}
                             menuOptions={[
                                 CONST.MENU_ITEM_KEYS.NEW_CHAT,
+                                CONST.MENU_ITEM_KEYS.REQUEST_MONEY,
                                 CONST.MENU_ITEM_KEYS.NEW_GROUP,
+                                CONST.MENU_ITEM_KEYS.SPLIT_BILL,
                             ]}
 
                             /**

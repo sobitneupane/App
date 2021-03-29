@@ -237,7 +237,13 @@ class ReportActionCompose extends React.Component {
                                                     }, 10);
                                                 }}
                                                 onItemSelected={() => this.setMenuVisibility(false)}
-                                                menuOptions={[CONST.MENU_ITEM_KEYS.ATTACHMENT_PICKER]}
+                                                menuOptions={hasMultipleParticipants
+                                                    ? [
+                                                        CONST.MENU_ITEM_KEYS.SPLIT_BILL,
+                                                        CONST.MENU_ITEM_KEYS.ATTACHMENT_PICKER]
+                                                    : [
+                                                        CONST.MENU_ITEM_KEYS.REQUEST_MONEY,
+                                                        CONST.MENU_ITEM_KEYS.ATTACHMENT_PICKER]}
 
                                                 /**
                                                  * Temporarily hiding IOU Modal options while Modal is incomplete. Will

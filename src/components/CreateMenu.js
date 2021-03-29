@@ -59,12 +59,12 @@ class CreateMenu extends PureComponent {
             [CONST.MENU_ITEM_KEYS.REQUEST_MONEY]: {
                 icon: MoneyCircle,
                 text: 'Request Money',
-                onSelected: () => Navigation.navigate(ROUTES.NEW_CHAT),
+                onSelected: () => Navigation.navigate(ROUTES.IOU_REQUEST),
             },
             [CONST.MENU_ITEM_KEYS.SPLIT_BILL]: {
                 icon: Receipt,
                 text: 'Split Bill',
-                onSelected: () => Navigation.navigate(ROUTES.NEW_CHAT),
+                onSelected: () => Navigation.navigate(ROUTES.IOU_BILL),
             },
             [CONST.MENU_ITEM_KEYS.ATTACHMENT_PICKER]: {
                 icon: Paperclip,

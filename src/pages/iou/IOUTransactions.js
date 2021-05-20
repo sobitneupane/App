@@ -52,9 +52,8 @@ class IOUTransactions extends Component {
             return false;
         });
         if (!matchedAction) {
-            throw new Error(`Unable to locate a matching report action for transaction ${transaction.transactionID}!`);
+            console.error(`Unable to match transaction ${transaction.transactionID}, due to old IOU reports being deleted.`);
         }
-
         return matchedAction;
     }
 

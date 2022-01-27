@@ -325,6 +325,7 @@ function configureReportNameAndIcon(reports, details) {
     // report and based on the participants we'll link up their avatars to report icons. This will
     // skip over default rooms which aren't named by participants.
 
+    const formattedPersonalDetails = PersonalDetails.formatPersonalDetails(details);
     const reportsToUpdate = {};
     _.each(reports, (report) => {
         if (report.participants.length <= 0 && !ReportUtils.isChatRoom(report)) {
@@ -337,7 +338,7 @@ function configureReportNameAndIcon(reports, details) {
             : _.chain(report.participants)
                 .filter(participant => participant !== currentUserEmail)
                 .map(participant => lodashGet(
-                    details,
+                    formattedPersonalDetails,
                     [participant, 'displayName'],
                     participant,
                 ))

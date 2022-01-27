@@ -609,6 +609,9 @@ export default compose(
     withLocalize,
     withPersonalDetails(),
     withOnyx({
+        report: {
+            key: ({reportID}) => `${ONYXKEYS.COLLECTION.REPORT}${reportID}`,
+        },
         isLoadingReportActions: {
             key: ONYXKEYS.IS_LOADING_REPORT_ACTIONS,
             initWithStoredValues: false,
